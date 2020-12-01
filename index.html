@@ -12,7 +12,7 @@
 </head>
 <body>
     <h1>Event Listener Practice</h1>
-
+ 
     <p id="firstParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium perferendis rem vero libero quae atque nesciunt doloremque deserunt ea id cupiditate debitis voluptates, voluptatibus consequuntur delectus, amet asperiores vitae illum!</p>
 
     <p id="secondParagraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dolor animi perspiciatis sunt sequi iste quo laboriosam eos quod repellat est, iusto tempore inventore aut, nemo laudantium incidunt a expedita!</p>
@@ -23,30 +23,30 @@
 
     <script>
         //alert when firstParagraph is clicked
-        document.getElementById("firstParagraph").onclick = alertCorrect;
+        document.getElementById("firstParagraph").addEventListener("click", alertCorrect);
         function alertCorrect() {
             alert("You are correct!");
         }
 
+        
+
         //change secondParagraph color to red when clicked
-        document.getElementById("secondParagraph").onclick = changeColor;
+        document.getElementById("secondParagraph").addEventListener("click", changeColor);
         function changeColor() {
             document.getElementById("secondParagraph").style.color = "red";
         }
 
         //change thirdParagraph font family when mouse hovers over
-        document.getElementById("thirdParagraph").onclick = changeFont;
-        function changeFont() {
+        document.getElementById("thirdParagraph").addEventListener("click", changeFontFamily);
+        function changeFontFamily() {
             document.getElementById("thirdParagraph").style.fontFamily = "Lucida Console";
         }
 
         //change thirdParagraph font size when mouse hovers over
-        document.getElementById("fourthParagraph").onmouseover = changeFontSize;
+        document.getElementById("fourthParagraph").addEventListener("mouseover", changeFontSize);
         function changeFontSize() {
             document.getElementById("fourthParagraph").style.fontSize = "25px";
         }
-
-        //
     </script>
 </body>
 </html>
